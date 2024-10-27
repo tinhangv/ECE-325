@@ -31,12 +31,15 @@ public class Song {
 	 */
 	@Override
 	public boolean equals(Object o) {
-		//Comparison returns false if o is not a Song 
+		if(o == null) return false;
+//		//Comparison returns false if o is not a Song 
 		if(!(o instanceof Song)) return false;
-		
-		//type cast the object into a Song if it's an instance of Song
+//		
+//		//type cast the object into a Song if it's an instance of Song
 		Song song_o = (Song) o;
+		//System.out.println("equals(Object o) called by: " + this + " ,with param: " + o);
 		return this.equals(song_o);
+		
 	}
 	
 	/**
@@ -46,12 +49,15 @@ public class Song {
 	 * @return true if titles and instruments same, false otherwise
 	 */
 	public boolean equals(Song s) {
+		if(s == null) return false;
 		//get the instruments lists of both Songs
 		ArrayList<String> sIns = s.getInstruments();
 		ArrayList<String> thisIns = this.getInstruments();
 		//order doesn't matter, so sort the lists alphabetically and compare
 		Collections.sort(sIns);
 		Collections.sort(thisIns);
+		
+		//System.out.println("equals(Object s) called by: " + this + " ,with param: " + s);
 	
 		return (s.title.equals(title) && sIns.equals(thisIns));	
 	}

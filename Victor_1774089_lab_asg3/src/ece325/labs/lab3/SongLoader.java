@@ -47,8 +47,6 @@ public class SongLoader {
 
 		return sc;
 	}
-	
-
 
 	/**
 	 * Parse a Song object from the String and return it. If the String cannot be
@@ -104,7 +102,8 @@ public class SongLoader {
 		
 //		SongCollection sc = SongLoader.loadSongs(file);
 //		Song s1 = new Song("Contribution",new ArrayList<String>(Arrays.asList("Guitar", "Guitar","Drums")),new AverageRating(100));
-//		//contains
+		
+		//contains
 //		System.out.println(sc.contains(s1));
 //		//remove
 //		sc.remove(s1);
@@ -115,9 +114,13 @@ public class SongLoader {
 //		System.out.println(sc.getSongs());
 		
 		//equals
-//		Object song_obj = new Song("Contribution",new ArrayList<String>(Arrays.asList("Guitar", "Guitar","Drums")),new AverageRating(100));
-//		System.out.println(s1.equals(song_obj));
-//		
+//			Song s1 = new Song("Contribution",new ArrayList<String>(Arrays.asList("Guitar", "Guitar","Drums")),new AverageRating(100));
+//			Object song_obj = new Song("Contribution",new ArrayList<String>(Arrays.asList("Guitar", "Guitar","Drums")),new AverageRating(100));
+//			System.out.println(s1.equals(song_obj));
+//			System.out.println(song_obj.equals(s1));
+//			Song s2 = null;
+//			System.out.println(s1.equals(s2));
+		
 //		//encapsulation (getters should not be able to change private fields)
 //		//getSong
 //			Song gs = sc.getSong(0);
