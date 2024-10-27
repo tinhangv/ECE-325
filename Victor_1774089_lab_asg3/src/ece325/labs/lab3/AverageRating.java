@@ -9,6 +9,7 @@ public class AverageRating {
 	
 	/** 
 	 * Create an AverageRating object by initializing the avgRating float and count int.
+	 * @param rating
 	 */
 	public AverageRating(float rating) {
 		avgRating = rating;
@@ -24,10 +25,17 @@ public class AverageRating {
 		count ++;
 	}
 	
+	/**
+	 * @return the avgRating
+	 */
 	public float getAvgRating() {
 		return avgRating;
 	}
 	
+	/**
+	 * @return the string representation of the AverageRating object
+	 */
+	@Override
 	public String toString() {
 		return "[AverageRating: " + avgRating + "]";
 	}

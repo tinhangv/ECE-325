@@ -50,7 +50,7 @@ public class SongCollection {
 	 * The SongCollection contains the Song if there exists a Song with 
 	 * the same title and instruments in the SongCollection.
 	 * @param s
-	 * @return
+	 * @return true if SongCollection contains s, false otherwise
 	 */
 	public boolean contains(Song s) {
 		for(Song s1: songs) {
@@ -80,18 +80,16 @@ public class SongCollection {
 	}
 	
 	/**
-	 * Returns a copy of the songs list.
-	 * @return 
+	 * @return a copy of the songs list
 	 */
 	public ArrayList<Song> getSongs() {
 		return new ArrayList<Song>(songs);
 	}
 	
 	/**
-	 * Returns the string representation of the SongCollection object
-	 * @return
-	 * @override
+	 * @return the string representation of the SongCollection object
 	 */
+	@Override
 	public String toString() {
 		String toRet = "[SongCollection: ";
 		for (Song s : songs)
