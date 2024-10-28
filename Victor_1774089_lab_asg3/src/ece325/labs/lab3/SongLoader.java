@@ -29,7 +29,7 @@ public class SongLoader {
 		SongCollection sc = new SongCollection();
 		//read the lines
 		try {
-			Scanner s = new Scanner(new BufferedReader(new FileReader("songratings.txt")));
+			Scanner s = new Scanner(new BufferedReader(new FileReader(file)));
 			while (s.hasNextLine()) {
 				//create song object
 				Song song = parseSong(s.nextLine());
