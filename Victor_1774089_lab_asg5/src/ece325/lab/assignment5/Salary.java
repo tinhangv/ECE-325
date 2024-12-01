@@ -21,8 +21,15 @@ public class Salary {
 	 * @return the amount of pay a band member will get (in dollars)
 	 */
 	public static Double pay(Double salary, Double snacksAmount, Integer bonus) {
-		if(salary>1000 || salary<0)
+		//validate inputs
+		if(salary == null || snacksAmount==null || bonus == null)
+			throw new IllegalArgumentException("null argument(s)");
+		if(salary<0 || salary>1000)
 			throw new IllegalArgumentException("invalid salary");
+		if(bonus<0 || bonus>10)
+			throw new IllegalArgumentException("invalid bonus");
+		if(snacksAmount > salary || snacksAmount <0)
+			throw new IllegalArgumentException("invalid snacksAmount");
 		
 		return (salary - snacksAmount) * (1+bonus/100d);
 	}
